@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_dark_default_color_background"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/ivHead"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivHpPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:background="?attr/selectableItemBackground"
+        app:srcCompat="@drawable/ic_baseline_chevron_right_24"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivHpMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="8dp"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintLeft_toRightOf="@id/ivHead"
+        app:layout_constraintRight_toLeftOf="@id/ivHpPlus"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:srcCompat="@drawable/ic_baseline_chevron_left_24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ivHpPlus"
+        app:layout_constraintBottom_toBottomOf="@id/ivHpPlus"
+        app:layout_constraintRight_toLeftOf="@id/ivHpMinus"
+        android:layout_margin="8dp"
+        android:textColor="@color/white"
+        android:text="生命"/>
+
+    <TextView
+        android:id="@+id/tvHp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ivHpPlus"
+        app:layout_constraintBottom_toBottomOf="@id/ivHpPlus"
+        app:layout_constraintLeft_toRightOf="@id/ivHpMinus"
+        app:layout_constraintRight_toLeftOf="@id/ivHpPlus"
+        android:layout_margin="8dp"
+        android:inputType="number"
+        android:text="999"
+        android:textColor="?attr/colorSecondary" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMpPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ivHpPlus"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:background="?attr/selectableItemBackground"
+        app:srcCompat="@drawable/ic_baseline_chevron_right_24"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMpMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="8dp"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintLeft_toRightOf="@id/ivHead"
+        app:layout_constraintRight_toLeftOf="@id/ivMpPlus"
+        app:layout_constraintTop_toBottomOf="@id/ivHpMinus"
+        app:srcCompat="@drawable/ic_baseline_chevron_left_24" />
+
+    <TextView
+        android:id="@+id/tvMpKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ivMpPlus"
+        app:layout_constraintBottom_toBottomOf="@id/ivMpPlus"
+        app:layout_constraintRight_toLeftOf="@id/ivMpMinus"
+        android:layout_margin="8dp"
+        android:textColor="@color/white"
+        android:text="内力"/>
+
+    <TextView
+        android:id="@+id/tvMp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ivMpPlus"
+        app:layout_constraintBottom_toBottomOf="@id/ivMpPlus"
+        app:layout_constraintLeft_toRightOf="@id/ivMpMinus"
+        app:layout_constraintRight_toLeftOf="@id/ivMpPlus"
+        android:layout_margin="8dp"
+        android:inputType="number"
+        android:text="999"
+        android:textColor="?attr/colorSecondary" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivExpPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ivMpPlus"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:background="?attr/selectableItemBackground"
+        app:srcCompat="@drawable/ic_baseline_chevron_right_24"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivExpMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="8dp"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintLeft_toRightOf="@id/ivHead"
+        app:layout_constraintRight_toLeftOf="@id/ivExpPlus"
+        app:layout_constraintTop_toBottomOf="@id/ivMpMinus"
+        app:srcCompat="@drawable/ic_baseline_chevron_left_24" />
+
+    <TextView
+        android:id="@+id/tvExpKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ivExpPlus"
+        app:layout_constraintBottom_toBottomOf="@id/ivExpPlus"
+        app:layout_constraintRight_toLeftOf="@id/ivExpMinus"
+        android:layout_margin="8dp"
+        android:textColor="@color/white"
+        android:text="经验"/>
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ivExpPlus"
+        app:layout_constraintBottom_toBottomOf="@id/ivExpPlus"
+        app:layout_constraintLeft_toRightOf="@id/ivExpMinus"
+        app:layout_constraintRight_toLeftOf="@id/ivExpPlus"
+        android:layout_margin="8dp"
+        android:inputType="number"
+        android:text="999"
+        android:textColor="?attr/colorSecondary" />
+
+    <View
+        android:id="@+id/viewAttribute"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/ivHead"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="?attr/selectableItemBackground">
+
+    </View>
+
+    <TextView
+        android:id="@+id/tvAttribute"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/ivHead"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:text="属性"
+        android:background="@drawable/selector_tab_bg"/>
+
+    <View
+        android:id="@+id/viewEquip"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewAttribute"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackground"/>
+
+    <TextView
+        android:id="@+id/tvEquip"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewAttribute"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:text="装备"
+        android:background="@drawable/selector_tab_bg"/>
+
+    <View
+        android:id="@+id/viewSkill"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewEquip"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackground"/>
+
+    <TextView
+        android:id="@+id/tvSkill"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewEquip"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:text="技能"
+        android:background="@drawable/selector_tab_bg"/>
+
+    <View
+        android:id="@+id/viewTalent"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewSkill"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackground"/>
+
+    <TextView
+        android:id="@+id/tvTalent"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewSkill"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:text="天赋"
+        android:background="@drawable/selector_tab_bg"/>
+
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/viewAttribute"
+        app:layout_constraintTop_toBottomOf="@id/ivExpPlus"
+        android:layout_margin="8dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_baseline_save_24"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
