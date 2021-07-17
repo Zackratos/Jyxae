@@ -2,9 +2,7 @@
 《金庸群侠传X》的存档修改器
 
 ## screenshots
-![](screenshots/screenshot_1.jpg)　![](screenshots/screenshot_2.jpg)
-
-![](screenshots/screenshot_3.jpg)　![](screenshots/screenshot_4.jpg)
+![](screenshots/screenshot_1.jpg)　![](screenshots/screenshot_2.jpg)　![](screenshots/screenshot_3.jpg)　![](screenshots/screenshot_4.jpg)
 
 ## Change Log
 [CHANGELOG](CHANGELOG.md)
