@@ -2,7 +2,6 @@ package com.zackratos.jyxae.archive
 
 import android.text.TextUtils
 import androidx.lifecycle.*
-import com.zackratos.jyxae.ext.filesDir
 import com.zackratos.jyxae.tools.DomManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -10,7 +9,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.dom4j.DocumentHelper
 import org.dom4j.Element
-import org.dom4j.io.OutputFormat
 import org.dom4j.io.XMLWriter
 import java.io.File
 
@@ -26,11 +24,14 @@ class ArchiveViewModel: ViewModel() {
 
     private var archive: Archive? = null
 
+    private var filePath: String? = null
+
     fun observe(owner: LifecycleOwner, observer: Observer<Archive>) {
         liveData.observe(owner, observer)
     }
 
     fun postLoadArchive(filePath: String?) {
+        this.filePath = filePath
         viewModelScope.launch {
             archive = withContext(Dispatchers.IO) {
                 loadArchive(filePath)
@@ -119,6 +120,7 @@ class ArchiveViewModel: ViewModel() {
 
     private fun saveArchive(archive: Archive?) {
         if (archive == null) return
+        if (TextUtils.isEmpty(filePath)) return
         val doc = DocumentHelper.createDocument()
         val root = doc.addElement("gamesave")
         root.addAttribute("name", "save")
@@ -155,7 +157,7 @@ class ArchiveViewModel: ViewModel() {
         archive.other.xmls.forEach {
             root.addText(it)
         }
-        val file = File("$filesDir/saves/save4")
+        val file = File(filePath!!)
         if (file.exists()) {
             file.delete()
             file.createNewFile()
